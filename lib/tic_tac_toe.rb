@@ -43,6 +43,7 @@ def turn(board)
   input = gets.chomp
   index = input_to_index(input)
   if valid_move?(board, index) == true
+    character = current_player(board)
     make_move(board, index, character)
     display_board(board)
   else

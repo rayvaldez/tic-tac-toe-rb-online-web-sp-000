@@ -69,7 +69,7 @@ def current_player(board)
   end
 end
 
-ef won?(board)
+def won?(board)
   WIN_COMBINATIONS.each {|combination|
     index_0 = combination[0]
     index_1 = combination[1]

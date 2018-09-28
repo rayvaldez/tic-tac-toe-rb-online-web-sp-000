@@ -43,8 +43,7 @@ def turn(board)
   input = gets.chomp
   index = input_to_index(input)
   if valid_move?(board, index) == true
-    make_move(board, index)
-    binding.pry
+    make_move(board)
     display_board(board)
   else
     turn(board)

@@ -43,7 +43,6 @@ def turn(board)
   input = gets.chomp
   index = input_to_index(input)
   if valid_move?(board, index) == true
-    character = current_player(board)
     make_move(board, index, character)
     display_board(board)
   else
@@ -51,13 +50,3 @@ def turn(board)
   end
 end
 
-
-def turn_count(board)
-  turn = 0
-  board.each do |index|
-    if index == "X" || index == "O"
-      turn += 1
-    end
-  end
-  return turn
-end

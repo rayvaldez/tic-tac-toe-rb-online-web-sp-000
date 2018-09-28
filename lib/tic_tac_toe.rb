@@ -23,7 +23,7 @@ def input_to_index(user_input)
 end
 
 def make_move(board, index, player_token)
-  board[index] = player_token
+  player_token = board[index]
 end
 
 def position_taken?(board, index)
@@ -43,7 +43,7 @@ def turn(board)
   input = gets.chomp
   index = input_to_index(input)
   if valid_move?(board, index) == true
-    make_move(board)
+    make_move(board, index, player_token)
     display_board(board)
   else
     turn(board)
